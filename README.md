@@ -120,6 +120,28 @@ pm2 start
 
 ### webRTC를 이용한 스터디원 연결 구조
 
+#### 1. 요구: 서버 부담없이 화상채팅을 포함한 기능을 구현하고 싶다.
+
+   - 온라인 스터디를 위해서 화상채팅, 화면공유 기능은 필수 였습니다. 
+   - 하지만 저희가 가진 서버의 자원은 한정적이었습니다.
+   - 서버에 적은 부담, 화상채팅+화면공유의 기능 구현을 위하여 P2P 데이터 통신 기술인 Web RTC를 사용했습니다.
+
+<img src="images/WebRTC_intro.jpg" height="500">
+
+#### 2. Web RTC의 방식은?
+
+- Web RTC를 사용하면 서버는 단순히 사용자들을 연결 시켜주는 역할만을 합니다.
+
+- Web RTC는 크게 3가지 클래스(MediaStream, RTCPeerConnection, RTCDataChannel) 을 통해 이루어지며 서버는 RTCPeerConnection 들이 적절하게 데이터를 교환할 수 있는 시그널링 작업을 진행해줍니다.
+
+- Web RTC는 P2P에 최적화 되어있습니다. Peer 들간의 공인 IP를 알아야 하고 이를 위해 Stun 서버를 통하여 NAT 환경에서 자신의 Public IP 를 파악하고 Peer 간에 P2P 연결을 이룩한다.
+
+- 둘 간의 연결이 불안정할 경우 중계서버 역할을 해줄 Turn 서버를 RTCPeerConnection 에 설정해줄 수 있습니다.
+
+  (StudyPro 는 Stun/Trun 서버를 Google 에서 제공하는 서버를 사용했습니다.)
+
+- ICE(Interactive Connectivity Establishment)는 ICE Candidate 를 서버를 통하여 교환하며 P2P 간 가장 안정한 연결을 찾습니다.
+
 
 
 ### redis를 이용한 트랜젝션 증가
@@ -134,7 +156,7 @@ pm2 start
 
    <img src="images/레디스.png" width="500">
 
-   - reid는 RDBMS에 직접적으로 접근하것보다 더 빠르게 처리하기 위한 일종의 인모메리 DB이다.
+   - reids는 RDBMS에 직접적으로 접근하것보다 더 빠르게 처리하기 위한 일종의 인모메리 DB이다.
    - redis가 사용되는 곳
      - 채팅, 메시징 대기열
      - 게임 순위표
