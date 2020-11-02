@@ -87,7 +87,7 @@
 
 :point_right: **bash 환경**에서 다음 명령어 실행하기
 
-`git clone https://github.com/swimminglee/studypro`
+`git clone https://github.com/ssafy-studypro/studypro`
 
 
 
