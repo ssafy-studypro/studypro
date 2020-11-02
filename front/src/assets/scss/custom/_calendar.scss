@@ -1,0 +1,108 @@
+#cal-content {
+    padding: 8px 12px 0 12px;
+}
+
+.ex-title {
+    font-size: 20px;
+}
+
+.cal-table {
+    padding: 0 30px 20px 30px;
+}
+
+// 이슈
+.issue-container-title {
+    font-size: 16px;
+}
+
+.issue-container {
+    flex-direction: column;
+    align-content: stretch;
+    min-height: 200px;
+    background-color: rgb(240, 240, 240);
+}
+
+.issue-list-container {
+    border: thick dashed rgba(0, 0, 0, 0.2);
+    height: 100%;
+}
+
+.list-group {
+    min-height: 200px;
+    height: 100% !important;
+    width: 100% !important;
+    span {
+        display: block;
+        height: 100%;
+        min-height: 200px;
+    }
+}
+
+.list-default-group {
+    height: 100% !important;
+    width: 100% !important;
+    span {
+        display: block;
+        height: 100%;
+    }
+}
+
+.list-group-item {
+    cursor: move;
+}
+
+.issue-card {
+    margin-bottom: 8px;
+    .issue-card-title {
+        font-size: 18px;
+        margin-bottom: 8px !important;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        /* 라인수 */
+        -webkit-box-orient: vertical;
+        word-wrap: break-word;
+        line-height: 1.2em;
+        height: 2.4em;
+    }
+    .issue-card-text {
+        font-size: 12px;
+        text-align: end;
+        margin-bottom: 0 !important;
+    }
+    p {
+        cursor: move;
+    }
+}
+
+.default-card {
+    background-color: rgba(240, 180, 180, 0.4) !important;
+}
+
+.issue-selected {
+    background-color: rgb(240, 240, 250) !important;
+}
+
+.flip-list-move {
+    transition: transform 0.5s;
+}
+
+.no-move {
+    transition: transform 0s;
+}
+
+.ghost {
+    opacity: 0.5;
+    background: #c8ebfb;
+}
+
+.modal-title {
+    background-color: #2e2c2c;
+}
+
+.issue-enter-btn {
+    span {
+        min-height: inherit;
+    }
+}

@@ -1,0 +1,140 @@
+// .v-application--wrap {
+//     background-color: rgba(21, 21, 22, 0.699);
+// }
+$black: #212529;
+$white: #ffffff;
+.theme--light.v-application {
+    background-color: #fff;
+}
+
+.dropPanel {
+    display: block;
+    text-decoration: none;
+    transition: all 200ms ease;
+    &.active {
+        background-color: rgba(0, 0, 0, 0.45);
+    }
+    ul {
+        li {
+            a {
+                background-color: transparent;
+            }
+        }
+    }
+}
+
+.dropdown {
+    transform: translatex(0%) rotatex(90deg) scale(0);
+    transform-origin: 0 0;
+    border-radius: 0.35em;
+    background-color: rgba($white, 0.75);
+    visibility: hidden;
+    transition: all 200ms linear;
+    width: 160px;
+    &.menu {
+        transform: translatex(0%);
+        visibility: visible;
+    }
+    ul>li {
+        &:hover {
+            background-color: rgba(200, 200, 200, 0.55);
+        }
+    }
+}
+
+.detaildrop {
+    transform: translatex(-40%) rotatex(90deg) scale(0);
+    transform-origin: 0 0;
+    border-radius: 0.35em;
+    background-color: rgba($white, 1);
+    visibility: hidden;
+    transition: all 200ms linear;
+    width: 160px;
+    &.menu {
+        transform: translatex(-40%);
+        visibility: visible;
+    }
+    ul>li {
+        &:hover {
+            background-color: rgba(200, 200, 200, 0.55);
+        }
+    }
+}
+
+ul {
+    list-style-type: none;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.theme--light.v-btn--active:before {
+    opacity: 0;
+}
+
+.routerText {
+    text-decoration: none;
+}
+
+.wrap-content {
+    display: inline-block;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.align-center {
+    display: flex;
+    align-items: center;
+}
+
+.justify-center {
+    display: flex;
+    justify-content: center;
+}
+
+.justify-start {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.justify-end {
+    display: flex;
+    justify-content: flex-end;
+}
+
+a {
+    text-decoration: none;
+}
+
+.ellipsis {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+    overflow: hidden;
+}
+
+.ellipsis-multi {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    /* 라인수 */
+    -webkit-box-orient: vertical;
+    word-wrap: break-word;
+    line-height: 1.2em;
+    height: 3.6em;
+    /* line-height 가 1.2em 이고 3라인을 자르기 때문에 height는 1.2em * 3 = 3.6em */
+}
+
+.card-text {
+    font-family: "TDTDTadakTadak", "RIDIbatang", "Times New Roman", Times, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}

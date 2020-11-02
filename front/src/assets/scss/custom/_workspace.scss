@@ -1,0 +1,36 @@
+#canvas_card {
+    /* width: 1142px; */
+    height: 653px;
+    z-index: 1;
+}
+
+#canvas {
+    position: absolute;
+    left: 11px;
+    z-index: 2;
+}
+
+.btns {
+    position: absolute;
+    position: absolute;
+    position: absolute;
+    top: 10px;
+    z-index: 3;
+}
+
+#swatches {
+    translate: transformY(-10%);
+    left: 20px;
+}
+
+#pencil {
+    z-index: 3;
+    top: 11px;
+    left: 70px;
+}
+
+#clear {
+    z-index: 3;
+    top: 11px;
+    left: 120px;
+}

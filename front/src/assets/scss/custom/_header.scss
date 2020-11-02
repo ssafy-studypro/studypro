@@ -1,0 +1,51 @@
+.v-toolbar__content {
+    padding-top: 0;
+}
+
+#header-container {
+    height: 56px;
+}
+
+.header-logo-container {
+    height: 56px !important;
+    width: 15% !important;
+    padding-left: 2px;
+}
+
+.logo {
+    width: auto;
+    height: 100%;
+    min-height: 35px;
+}
+
+.header-menu-container {
+    height: 56px;
+    padding: 0;
+    .header-menu {
+        // display: inline-block !important;
+        background-color: transparent;
+    }
+}
+
+.header-usermenu-container {
+    height: 56px;
+    float: right;
+    .header-user-btn {
+        float: right;
+        padding: 0;
+        height: 100% !important;
+        cursor: pointer;
+    }
+}
+
+.logo {
+    font-size: 20px;
+}
+
+#navDrawer {
+    opacity: 0.8;
+}
+
+#header-user-drop {
+    // max-width: 130px;
+}
